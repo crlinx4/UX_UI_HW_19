@@ -1,0 +1,162 @@
+/* file: style.css */
+
+body {
+    background-image: url("../images/background.png");
+    z-index: 0;
+}
+
+.inline-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.logo {
+    width: 23%;
+    padding: 1%;
+    text-align: center;
+}
+
+img.LogoPic {
+    height: 150px;
+    width: 150px;
+    background-color: #B0C4B1;
+}
+
+.MyPic {
+    height: 450px;
+    width: 400px;
+    border-radius: 10%;
+    border: 5px solid #EDAFB7;
+}
+
+nav {
+  width: 90%;
+  padding: 1%;  
+  background-color:#B0C4B1;
+}
+
+.headerlist {
+    width: 50%;
+    margin-left: auto;
+}
+
+img.researchPic {
+    height: 200px;
+    width: 250px;
+}
+
+img.empathyPic {
+    height: 219px;
+    width: 250px;
+}
+
+img.interviewPic {
+    height: 182px;
+    width: 250px;
+}
+
+img.bbPic {
+    height: 400px;
+    width: 450px;
+    background-color: lightgray;
+    border-radius: 10%;
+}
+
+img.doePic {
+    height: 400px;
+    width: 450px;
+    border-radius: 10%;
+}
+
+img.tmpPic {
+    height: 400px;
+    width: 450px;
+    border-radius: 10%;
+}
+
+footer {
+    background-color: #373738;
+    width: 100%;
+    padding: 1%;
+    text-align: center;
+    color: #F7E1D7;
+}
+
+.footerlist {
+    display: inline-block;
+    vertical-align: top;
+    padding: 1%;
+}
+
+/* Flex Containers */
+
+.flexContainer {
+    display:flex;
+    flex-direction: row;
+    padding: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flexChild {
+    width: 20%;
+    height: 50%;
+    align-items: center;
+    padding: 50px;
+    border: 2px solid #4B5759;
+    border-radius: 10%;
+    box-shadow: 2px 2px #4B5759;
+    background-color: white;
+    z-index: 1;
+}
+
+/* Grid Containers */
+
+.workGrid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 50px;
+}
+
+.projectChild1 {
+    padding: 75px;
+    width: 400px;
+}
+
+.projectChild2 {
+    padding: 75px;
+    width: 400px;
+}
+
+.projectChild3 {
+    padding: 75px;
+    width: 400px;
+}
+
+button {
+    background-color: #4B5759;
+    height: 50px;
+    width: 450px;
+    color: #F7E1D7;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+/* Mobile Media Query */
+
+@media only screen and (max-width: 600){
+    flex-direction: column;
+    .flexChild {
+        width: 100%;
+    }
+    .workGrid {
+        margin: 0px 5%;
+        display: grid;
+        grid-template-rows: 300px 300px 300px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "projectChild1"
+        "projectChild2"
+        "projectChild3";
+    }
+}
